@@ -68,7 +68,7 @@ always @(negedge clk or negedge rst)
   if (!rst) begin
     COPI_register<='0;
     COPI<=1'b0;
-    count_neg<=LENGTH_SEND+LENGTH_RECIEVED+2+PAUSE;  //TALK TO IVGENY ON THESE WAARNINGS
+    count_neg<=LENGTH_SEND+LENGTH_RECIEVED+2+PAUSE;
   end
   else if (start==1'b1) begin
     count_neg<=0;
