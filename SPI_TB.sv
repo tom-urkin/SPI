@@ -132,7 +132,7 @@ $display("\nTest 2 completed successfully\n");
 //----------------------------------------//
 
 //Test #3: Random 8-bit words is sent from the controller to the periphary. Random 16-bit word is sent from the periphary to the controller. Randomly change the periphery.
-for(k=0; k<10; k++) begin 
+for(k=0; k<20; k++) begin 
   data_send_c= $dist_uniform(SEED,0,2**LENGTH_SEND_C-1);                    //8-bit random number to be sent to the periphary
   data_send_p= $dist_uniform(SEED,0,2**LENGTH_SEND_P-1);                    //16-bit random number to be sent to the controller
   CS_in= $dist_uniform(SEED,0,PERIPHERY_COUNT-1);                           //Randomizing CS signal 
@@ -163,9 +163,9 @@ for(k=0; k<10; k++) begin
     $finish;
   end
 
-$display("\nTest 3 completed successfully\n");	
 end
 
+$display("\nTest 3 completed successfully\n");	
 $finish;
 end
 

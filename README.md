@@ -33,7 +33,23 @@ The SPI communication protocol sub-modules are teste for a single-master and fou
 	
 	Note: all communication parameters are defined as constants which can be overidden to comply with different data length, pause interval etc. 
 	
+2.	Initiating communication when communication is taking place
+	Communication initiation is carried at the rising edge of 'start_comm' signal. This test verifies that re-trigerring of this signal does not affect ongoing communication activities. 
+	Here, a re-trigerring event occurs after 'wait_rand' (randomly generated on each iteration).
+	
+	**Communication between a single periphery (waveform):**
+		![Communication between a single periphery](./docs/tst2_wave.JPG) 
 
+3.	Multiple peripheral units system
+	Communication attributes remain as in the first test. Here, there are four peripheral units communicating with the controller according to the randomly generated CS_in value. 
+	As can be seen, based on the CS value the inactive peripheral units' CIPO line is 1'bz.
+	
+	**Multiple peripheral units system (waveform):**
+		![Communication between a single periphery](./docs/tst3_wave.JPG) 
+
+	**Multiple peripheral units system (terminal):**
+		![Communication between a single periphery](./docs/tst3_terminal.JPG)
+		
 ## Support
 
 I will be happy to answer any questions.  
